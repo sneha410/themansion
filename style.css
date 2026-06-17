@@ -1,11 +1,13 @@
+/* RESET */
 *{
     margin:0;
+    padding:0;
     padding:0;
     box-sizing:border-box;
 }
 
 body{
-    font-family:'Inter',sans-serif;
+    font-family:'Inter', sans-serif;
     color:#222;
     overflow-x:hidden;
 }
@@ -15,47 +17,52 @@ img{
     display:block;
 }
 
+/* HEADER */
 header{
     padding:40px 8%;
-}
-
-.logo{
     text-align:center;
 }
 
 .logo h1{
     font-size:5rem;
-    font-family:'Cormorant Garamond',serif;
+    font-family:'Cormorant Garamond', serif;
 }
 
 .logo p{
     font-size:1.2rem;
     letter-spacing:4px;
+    margin-top:5px;
 }
 
-nav{
-    margin-top:30px;
-}
-
-nav ul{
-    list-style:none;
+/* NAV LINKS (IMPORTANT FIX) */
+.nav-links{
     display:flex;
     justify-content:center;
     gap:35px;
+    margin-top:30px;
+    flex-wrap:wrap;
 }
 
-nav a{
+.nav-links a{
     text-decoration:none;
     color:#000;
     font-size:1rem;
+    letter-spacing:1px;
+    transition:0.3s;
 }
 
+.nav-links a:hover{
+    color:#6a3254;
+}
+
+/* HERO */
 .hero img{
     width:100%;
     height:80vh;
     object-fit:cover;
 }
 
+/* INTRO */
 .intro{
     text-align:center;
     padding:100px 10%;
@@ -63,8 +70,8 @@ nav a{
 
 .intro h2{
     font-size:3rem;
+    font-family:'Cormorant Garamond', serif;
     margin-bottom:30px;
-    font-family:'Cormorant Garamond',serif;
 }
 
 .intro p{
@@ -83,6 +90,7 @@ nav a{
     padding-bottom:5px;
 }
 
+/* GALLERY */
 .gallery{
     display:grid;
     grid-template-columns:repeat(3,1fr);
@@ -90,6 +98,7 @@ nav a{
     padding:0 8%;
 }
 
+/* COLLECTION */
 .collection{
     text-align:center;
     padding:100px 10%;
@@ -97,8 +106,8 @@ nav a{
 
 .collection h2{
     font-size:3rem;
+    font-family:'Cormorant Garamond', serif;
     margin-bottom:20px;
-    font-family:'Cormorant Garamond',serif;
 }
 
 .collection p{
@@ -106,6 +115,7 @@ nav a{
     line-height:1.8;
 }
 
+/* CORPORATE */
 .corporate{
     display:flex;
     align-items:center;
@@ -113,15 +123,14 @@ nav a{
     gap:50px;
 }
 
-.left,
-.right{
+.left, .right{
     flex:1;
 }
 
 .right h2{
     font-size:2.8rem;
     margin-bottom:20px;
-    font-family:'Cormorant Garamond',serif;
+    font-family:'Cormorant Garamond', serif;
 }
 
 .right p{
@@ -129,6 +138,7 @@ nav a{
     margin-bottom:25px;
 }
 
+/* VALUES */
 .values{
     text-align:center;
     padding:100px 10%;
@@ -136,26 +146,24 @@ nav a{
 
 .values h2{
     font-size:3rem;
+    font-family:'Cormorant Garamond', serif;
     margin-bottom:20px;
-    font-family:'Cormorant Garamond',serif;
 }
 
+.values p{
+    font-size:1.1rem;
+    line-height:1.8;
+}
+
+/* FOOTER */
 footer{
     background:#111;
-    color:white;
+    color:#fff;
     text-align:center;
     padding:50px;
 }
 
-.menu-btn{
-    display:none;
-    text-align:center;
-    font-size:2rem;
-    cursor:pointer;
-}
-
-/* MOBILE */
-
+/* ================= MOBILE ================= */
 @media(max-width:768px){
 
     .logo h1{
@@ -163,35 +171,16 @@ footer{
     }
 
     .logo p{
-        font-size:.9rem;
+        font-size:0.9rem;
     }
 
-    .menu-btn{
-        display:block;
-        margin-top:20px;
-    }
-
-    nav ul{
-        display:none;
+    .nav-links{
         flex-direction:column;
-        text-align:center;
         gap:15px;
-        margin-top:20px;
-    }
-
-    nav ul.active{
-        display:flex;
     }
 
     .hero img{
         height:50vh;
-    }
-
-    .intro h2,
-    .collection h2,
-    .right h2,
-    .values h2{
-        font-size:2rem;
     }
 
     .gallery{
@@ -206,5 +195,18 @@ footer{
     .collection,
     .values{
         padding:60px 20px;
+    }
+
+    .intro h2,
+    .collection h2,
+    .right h2,
+    .values h2{
+        font-size:2rem;
+    }
+
+    .intro p,
+    .collection p,
+    .values p{
+        font-size:1rem;
     }
 }
